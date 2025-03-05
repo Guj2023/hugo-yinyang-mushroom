@@ -1,5 +1,5 @@
 // Audio service that runs in the background
-let audio = new Audio("../audio/jazz-hiphop.mp3");
+let audio = new Audio("../audio/The Scholars and the Travellers.mp3");
 let playing = localStorage.getItem("audioPlaying") === "true";
 
 // Initialize audio
