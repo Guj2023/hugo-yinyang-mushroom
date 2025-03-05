@@ -58,13 +58,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Bungee+Shade" rel="stylesheet">
   <!-- quicklink require -->
-  <!-- <script>
-    /* Disable minification (remove `.min` from URL path) for more info 
-    https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver
-    */
-    (function (undefined) { }).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});
-  </script> -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
   {{ if .Site.Params.TwitterCards }}{{ template "_internal/twitter_cards.html" . }}{{ end }}
   {{ .Site.Params.extraHead | safeHTML }}
+  <script>
+    if (!document.getElementById('audio-service-frame')) {
+      console.log('Creating audio service frame');
+      var iframe = document.createElement('iframe');
+      iframe.id = 'audio-service-frame';
+      iframe.src = '/html/audio-frame.html';
+      iframe.style.display = 'none';
+      iframe.title = 'Background Audio Service';
+      document.head.appendChild(iframe);
+    }
+  </script>
 </head>
