@@ -7,13 +7,10 @@
   </div>
   <div class="header-subtitle">{{ .Site.Params.Description }}
     <div id="mini-audio-player">
-      <button id="head-button" style="width: 20px; height: 20px;">Play</button>
-      <input type="range" id="audio-progress" min="0" max="100" value="0" style="width: 150px; height: 20px;">
+      <button id="head-button">▶</button>
+      <input type="range" id="audio-progress" min="0" max="100" value="0">
     </div>
-  
   </div>
-
-
 </header>
 <div class="row end-md header-items">
   {{ range .Site.Params.socials }}

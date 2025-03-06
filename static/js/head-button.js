@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (headButton) {
     // Set initial button text based on saved state with standard symbols
     const playSymbol = "▶"; // Standard Unicode play triangle
-    const pauseSymbol = "❙ ❙"; // Double vertical bars for pause
+    const pauseSymbol = "❙❙"; // Double vertical bars for pause
     headButton.textContent = playing ? pauseSymbol : playSymbol;
     
     // Update progress bar based on stored value

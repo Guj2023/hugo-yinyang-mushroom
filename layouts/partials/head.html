@@ -47,6 +47,9 @@
   {{ with resources.Get "css/flexboxgrid-6.3.1.min.css" | minify }}
     <style>{{ .Content | safeCSS }}</style>
   {{ end }}
+  {{ with resources.Get "css/audio-player.css" | minify }}
+    <style>{{ .Content | safeCSS }}</style>
+  {{ end }}
 
   {{ range .Site.Params.extraCSSFiles -}}
   <link rel="stylesheet" href="{{ $.Site.Params.staticPrefix }}{{ . | relURL }}">
